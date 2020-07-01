@@ -58,7 +58,7 @@ function getStringLength(value)
  */
 function getStringFromTemplate(firstName, lastName)
 {
-    return `Hello, ${firstName} ${lastName}`
+    return `Hello, ${firstName} ${lastName}!`
 }
 
 /**
@@ -213,7 +213,7 @@ function extractEmails(str)
  */
 function getRectangleString(width, height)
 {
-    let dataStr = '-'.repeat(width - 2)
+    let dataStr = '─'.repeat(width - 2)
     return `┌${dataStr}┐\n` + `|${' '.repeat(width - 2)}|\n`.repeat(height - 2) + `└${dataStr}┘\n`
 
 }
@@ -257,7 +257,7 @@ function encodeToRot13(str)
  */
 function isString(value)
 {
-    return value ? typeof value.valueOf() == 'strring' : false
+    return value ? typeof value.valueOf() == 'string' : false
 }
 
 
@@ -287,7 +287,7 @@ function isString(value)
  */
 function getCardId(value)
 {
-    let cards = ['A', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+    let cards = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
     let suits = ['♣', '♦', '♥', '♠']
     return cards.indexOf(value.slice(0, -1)) + suits.indexOf(value.slise(-1)) * cards.length
 }
