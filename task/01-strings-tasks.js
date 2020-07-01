@@ -214,7 +214,7 @@ function extractEmails(str)
 function getRectangleString(width, height)
 {
     let dataStr = '─'.repeat(width - 2)
-    return `┌${dataStr}┐\n` + `|${' '.repeat(width - 2)}|\n`.repeat(height - 2) + `└${dataStr}┘\n`
+    return `┌${dataStr}┐\n` + `│${' '.repeat(width - 2)}│\n`.repeat(height - 2) + `└${dataStr}┘\n`
 
 }
 
@@ -289,7 +289,7 @@ function getCardId(value)
 {
     let cards = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
     let suits = ['♣', '♦', '♥', '♠']
-    return cards.indexOf(value.slice(0, -1)) + suits.indexOf(value.slise(-1)) * cards.length
+    return cards.indexOf(value.slice(0, -1)) + suits.indexOf(value.slice(-1)) * cards.length
 }
 
 
